@@ -1,0 +1,13 @@
+cheroot==5.1.0
+Django==1.10.5
+gunicorn==19.6.0
+logging==0.4.9.6
+portend==1.8
+pyTelegramBotAPI==2.3.0
+requests==2.13.0
+six==1.10.0
+tempora==1.6.1
+virtualenv==15.1.0
+whitenoise==3.3.0
+future==0.16.0
+viberbot==1.0.11
