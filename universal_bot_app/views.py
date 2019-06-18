@@ -6,12 +6,12 @@ from django.views.decorators.csrf import csrf_exempt
 import settings
 import sys
 
-import app_log
-import message_dispatcher
-import app_config
-import app_statistic
+import universal_bot_app.app_log
+import universal_bot_app.message_dispatcher
+import universal_bot_app.app_config
+import universal_bot_app.app_statistic
 
-import bot_config
+import universal_bot_app.bot_config
 
 @csrf_exempt
 def restart(self):

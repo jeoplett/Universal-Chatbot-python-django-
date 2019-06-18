@@ -1,8 +1,8 @@
 # coding: utf8 
 
-import models
-import app_config
-import app_log
+import universal_bot_app.models
+import universal_bot_app.app_config
+import universal_bot_app.app_log
 import importlib
 import sys
 

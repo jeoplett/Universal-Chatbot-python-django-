@@ -1,7 +1,7 @@
 # coding: utf8
 
 import requests
-import app_config
+import universal_bot_app.app_config
 import datetime
 
 def pushUnknownResponse(unified_message):

@@ -1,7 +1,7 @@
 # coding: utf8 
 
 import telebot
-import app_log
+import universal_bot_app.app_log
 import sys
 
 __MESSENGER_TYPE__ = "telegram"
