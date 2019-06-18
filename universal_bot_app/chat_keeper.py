@@ -4,6 +4,7 @@ import cPickle
 import copy
 import bot_config
 
+
 # ФУНКЦИИ МОДУЛЯ
 
 # Конструктор
