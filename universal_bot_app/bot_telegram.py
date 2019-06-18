@@ -25,7 +25,7 @@ def runBot(bot_config):
 
         # Устанавливаем webhook
         if bot_config['web_hook_url'] != bot.get_webhook_info().url:
-            print 'Hooking bot "' + bot_config['name'] + '": ' + bot_config['api_token']
+            print ('Hooking bot "' + bot_config['name'] + '": ' + bot_config['api_token'])
             if bot_config['web_hook_ssl_sert'] != "":
                 bot.set_webhook(url = bot_config['web_hook_url'], certificate = open(bot_config['web_hook_ssl_sert'], 'r'))
             else:
