@@ -1,6 +1,6 @@
 # coding: utf8
 
-import .bot_config
-import .app_config
+import universal_bot_app.bot_config
+import universal_bot_app.app_config
 
 bot_config.runBotsFromConfig()
