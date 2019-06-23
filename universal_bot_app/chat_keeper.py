@@ -1,6 +1,6 @@
 # coding: utf8
 
-import cPickle  
+import pickle  
 import copy
 from . import bot_config
 
@@ -16,16 +16,16 @@ def initChatsKeeper():
         file_fullname = getRecordsFullFileName(cur_bot_config)
         try:
             file = open(file_fullname, "rb")
-            __HISTORY_DICTOBJECT[cur_bot_config['name']] = cPickle.load(file)
+            __HISTORY_DICTOBJECT[cur_bot_config['name']] = pickle.load(file)
             file.close()
         except Exception:
             # Если ошибка открытия файла, то попытаемся его создать с пустым словарем
             file = open(file_fullname, "wb")
-            cPickle.dump(__HISTORY_EMPTYRECORD, file)
+            pickle.dump(__HISTORY_EMPTYRECORD, file)
             file.close()
             # После создания загружаем пустой словарь
             file = open(file_fullname, "rb")
-            __HISTORY_DICTOBJECT[cur_bot_config['name']] = cPickle.load(file)
+            __HISTORY_DICTOBJECT[cur_bot_config['name']] = pickle.load(file)
             file.close()
 
 # Замена крайнего состояния чата
@@ -44,7 +44,7 @@ def getLastChatRecord(unified_message):
     try:
         file_fullname = getRecordsFullFileName(unified_message['bot_config'])
         file = open(file_fullname, "rb")
-        __HISTORY_DICTOBJECT[unified_message['bot_config']['name']] = cPickle.load(file)
+        __HISTORY_DICTOBJECT[unified_message['bot_config']['name']] = pickle.load(file)
         file.close()
     except Exception:
         chat_id = unified_message['chat_id']
@@ -74,7 +74,7 @@ def saveLastChatsRecords(unified_message):
     try:
         file_fullname = getRecordsFullFileName(unified_message['bot_config'])
         file = open(file_fullname, "wb")
-        cPickle.dump(__HISTORY_DICTOBJECT[unified_message['bot_config']['name']], file)
+        pickle.dump(__HISTORY_DICTOBJECT[unified_message['bot_config']['name']], file)
         file.close()
     except Exception:
         return ""
