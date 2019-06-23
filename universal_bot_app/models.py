@@ -1023,6 +1023,5 @@ def initModel():
     initKnowledgeProfilesSemantics()
 
 
-
 # Инициализация модели
 initModel()
