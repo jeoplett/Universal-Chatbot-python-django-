@@ -247,7 +247,7 @@ def answerEVENT(unified_message):
     try:
         if unified_message['event_id'] == u"conversation_started":
             unified_message['response_text'] = [u"Привет, рад тебя видеть! Спрашивай, расскажу все, что знаю о нашем Банке."]
-	    unified_message['response_commands'] = [u"Задать вопрос", u"Сообщить о сложностях в работе"]
+            unified_message['response_commands'] = [u"Задать вопрос", u"Сообщить о сложностях в работе"]
         else:
             unified_message['response_text'] = []
     except Exception as exc:
