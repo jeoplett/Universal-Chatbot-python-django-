@@ -3,7 +3,7 @@
 import json
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-import settings
+from . import settings
 import sys
 
 from . import app_log
