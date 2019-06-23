@@ -8,11 +8,10 @@ import sys
 
 # Конфигурации чат-ботов
 BOT_CONFIGS = {
-    """
     "279802369:AAG11qQrJlySYTmozSq4Jno0ekNP7RbBdlc": {
         "name" : "bot_tlgrm_adopt_uat",
         "type" : "telegram",
-        "start" : "yes",
+        "start" : "no",
         "api_token" : "279802369:AAG11qQrJlySYTmozSq4Jno0ekNP7RbBdlc",
         "web_hook_url" : "https://pure-coast-15562-heroku-2018.herokuapp.com:443/universal_bot_dispatcher/279802369:AAG11qQrJlySYTmozSq4Jno0ekNP7RbBdlc/",
         "web_hook_ssl_sert" : "",
@@ -29,7 +28,6 @@ BOT_CONFIGS = {
         "accept_video_messages" : 'no',
         "state" : "running"
     },
-    """
     "48c64f31e6a7d79d-e0f1d73fd500afe4-2e7bc35ea8b893f": {
         "name" : u"hrcetelem",
         "type" : "viber",
