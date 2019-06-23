@@ -2,11 +2,11 @@
 
 import re
 import copy
-import universal_bot_app.app_statistic
-import universal_bot_app.app_log
-import universal_bot_app.chat_keeper
+from . import app_statistic
+from . import app_log
+from . import chat_keeper
 import random
-import universal_bot_app.bot_command
+from . import bot_command
 import sys
 
 def createUnifiedAnswerToText(unified_message):

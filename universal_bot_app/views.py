@@ -6,10 +6,10 @@ from django.views.decorators.csrf import csrf_exempt
 import settings
 import sys
 
-import universal_bot_app.app_log
-import universal_bot_app.message_dispatcher
-import universal_bot_app.app_config
-import universal_bot_app.app_statistic
+from . import app_log
+from . import message_dispatcher
+from . import app_config
+from . import app_statistic
 
 import universal_bot_app.bot_config
 

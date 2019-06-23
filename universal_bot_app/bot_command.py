@@ -1,6 +1,6 @@
 # coding: utf8
 
-import universal_bot_app.models
+from . import models
 
 # Возвращает все имена существующих профилей знаний
 def getAllBotKnowledgeProfileNames():

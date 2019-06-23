@@ -2,8 +2,8 @@
 
 from __future__ import unicode_literals
 from django.db import models
-import universal_bot_app.app_config
-import universal_bot_app.app_log
+from . import app_config
+from . import app_log
 import sys
 
 # Конфигурации чат-ботов

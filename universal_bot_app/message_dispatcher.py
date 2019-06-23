@@ -1,10 +1,10 @@
 # coding: utf8
 
-import universal_bot_app.app_log
+from . import app_log
 import importlib
-import universal_bot_app.app_config
-import universal_bot_app.message_analyzer
-import universal_bot_app.bot_config
+from . import app_config
+from . import message_analyzer
+from . import bot_config
 import sys
 
 # Подготовка унифицированного сообщения по json-объекту

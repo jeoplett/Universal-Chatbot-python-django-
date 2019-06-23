@@ -1,7 +1,7 @@
 # coding: utf8 
 
 from viberbot import Api
-import universal_bot_app.app_log
+from . import app_log
 from viberbot.api.bot_configuration import BotConfiguration
 from viberbot.api.messages import (
     TextMessage,

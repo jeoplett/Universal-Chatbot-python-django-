@@ -2,7 +2,7 @@
 
 import cPickle  
 import copy
-import universal_bot_app.bot_config
+from . import bot_config
 
 
 # ФУНКЦИИ МОДУЛЯ

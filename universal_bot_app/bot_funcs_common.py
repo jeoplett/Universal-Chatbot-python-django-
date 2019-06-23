@@ -1,10 +1,10 @@
 # coding: utf8
 
-import universal_bot_app.bot_command
-import universal_bot_app.app_log
+from . import bot_command
+from . import app_log
 import re
 import copy
-import universal_bot_app.app_config
+from . import app_config
 from universal_bot_app.message_analyzer import getNewAnswerFunction
 from universal_bot_app.message_analyzer import getLastAnswerFunction
 import requests
