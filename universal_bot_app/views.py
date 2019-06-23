@@ -11,7 +11,7 @@ from . import message_dispatcher
 from . import app_config
 from . import app_statistic
 
-import universal_bot_app.bot_config
+from . import bot_config
 
 @csrf_exempt
 def restart(self):
