@@ -30,7 +30,7 @@ SECRET_KEY = '9r*slbbm@32$e*l62ljaf&*kf-1(*tb!703f9l7n*gm-9v@*%)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["pure-coast-15562.herokuapp.com"] #["immense-woodland-46178.herokuapp.com"]
+ALLOWED_HOSTS = ["pure-coast-15562-heroku-18.herokuapp.com"] #["immense-woodland-46178.herokuapp.com"]
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 APPEND_SLASH = False
 
