@@ -8,26 +8,26 @@ import sys
 
 # Конфигурации чат-ботов
 BOT_CONFIGS = {
-    "279802369:AAG11qQrJlySYTmozSq4Jno0ekNP7RbBdlc": {
-        "name" : "bot_tlgrm_adopt_uat",
-        "type" : "telegram",
-        "start" : "no",
-        "api_token" : "279802369:AAG11qQrJlySYTmozSq4Jno0ekNP7RbBdlc",
-        "web_hook_url" : "https://pure-coast-15562-heroku-18.herokuapp.com:443/universal_bot_dispatcher/279802369:AAG11qQrJlySYTmozSq4Jno0ekNP7RbBdlc/",
-        "web_hook_ssl_sert" : "",
-        "web_hook_ssl_priv" : "",
-        "knowledge_profile" : "adopt",
-        "module": "bot_telegram",
-        "module_config" : {
-            "text_message_length" : 300
-        },
-        "accept_text_messages" : 'yes',
-        "accept_event_messages" : 'yes',
-        "accept_picture_messages" : 'no',
-        "accept_sound_messages" : 'no',
-        "accept_video_messages" : 'no',
-        "state" : "running"
-    },
+   # "279802369:AAG11qQrJlySYTmozSq4Jno0ekNP7RbBdlc": {
+   #     "name" : "bot_tlgrm_adopt_uat",
+   #     "type" : "telegram",
+   #     "start" : "no",
+   #     "api_token" : "279802369:AAG11qQrJlySYTmozSq4Jno0ekNP7RbBdlc",
+   #     "web_hook_url" : "https://pure-coast-15562-heroku-18.herokuapp.com:443/universal_bot_dispatcher/279802369:AAG11qQrJlySYTmozSq4Jno0ekNP7RbBdlc/",
+   #     "web_hook_ssl_sert" : "",
+   #     "web_hook_ssl_priv" : "",
+   #     "knowledge_profile" : "adopt",
+   #     "module": "bot_telegram",
+   #     "module_config" : {
+   #         "text_message_length" : 300
+   #     },
+   #     "accept_text_messages" : 'yes',
+   #     "accept_event_messages" : 'yes',
+   #     "accept_picture_messages" : 'no',
+   #     "accept_sound_messages" : 'no',
+   #     "accept_video_messages" : 'no',
+   #     "state" : "running"
+   # },
     "48c64f31e6a7d79d-e0f1d73fd500afe4-2e7bc35ea8b893f": {
         "name" : u"hrcetelem",
         "type" : "viber",
