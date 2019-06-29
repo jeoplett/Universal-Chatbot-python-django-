@@ -2,7 +2,6 @@
 
 from . import models
 
-
 # Возвращает все имена существующих профилей знаний
 def getAllBotKnowledgeProfileNames():
     return models.getAllBotKnowledgeProfileNames()
