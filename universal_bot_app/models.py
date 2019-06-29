@@ -56,7 +56,7 @@ BOT_CONFIGS = {
         "web_hook_url" : "https://pure-coast-15562-heroku-18.herokuapp.com:443/universal_bot_dispatcher/49e8d10c7d27d26a-3e72f70e63166065-4d73250fa4de5153/",
         "web_hook_ssl_sert" : "",
         "web_hook_ssl_priv" : "",
-        "knowledge_profile" : "adopt",
+        "knowledge_profile" : "adoptrkz",
         "module": "bot_viber",
         "module_config" : {
             "text_message_length" : '300'
