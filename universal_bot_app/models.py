@@ -111,7 +111,59 @@ MESSAGE_MAP_ADOPT_RKZ = {
         "re": [u"задать вопрос", u"вопрос"],
         "type": "info"
     },
-   u"сообщить о сложностях в работе": {
+    u"важные контакты": {
+        "command": u"Важные контакты",
+        "previous_commands": ["задать вопрос"],
+        "next_commands": [u"Важные контакты", u"О банке", u"Наши ценности", u"Рабочие моменты"],
+        "repeat_last_command_text": "false",
+        "repeat_last_command_next_commands": "false",
+        "repeatable_text": "true",
+        "repeatable_next_commands": "true",
+        "answer_func": "answerEMPTY",
+        "answer_text": [u"О каких контактах ты хотел бы узнать?"],
+        "re": [u"контакт", u"телефон", u"почта", u"емэйл", u"email"],
+        "type": "info"
+    },
+    u"о банке": {
+        "command": u"О банке",
+        "previous_commands": ["задать вопрос"],
+        "next_commands": [u"Общая информация", u"Отделы РКЦ", u"Цель и миссия"],
+        "repeat_last_command_text": "false",
+        "repeat_last_command_next_commands": "false",
+        "repeatable_text": "true",
+        "repeatable_next_commands": "true",
+        "answer_func": "answerEMPTY",
+        "answer_text": [u"О чем ты хотел бы спросить?"],
+        "re": [u"банк", u"сетелем", u"кредито", u"cetelem", u"bank"],
+        "type": "info"
+    },
+    u"наши ценности": {
+        "command": u"Наши ценности",
+        "previous_commands": ["задать вопрос"],
+        "next_commands": [u"Да", u"Нет"],
+        "repeat_last_command_text": "false",
+        "repeat_last_command_next_commands": "false",
+        "repeatable_text": "true",
+        "repeatable_next_commands": "true",
+        "answer_func": "answerEMPTY",
+        "answer_text": [u"Хотел бы узнать о ценностях, принятых у нас в Банке?"],
+        "re": [u"ценност", u"лидер", u"команда", u"клиент"],
+        "type": "info"
+    },
+    u"рабочие моменты": {
+        "command": u"Рабочие моменты",
+        "previous_commands": ["задать вопрос"],
+        "next_commands": [u"Рабочий график", u"Мотивация денежная", u"Отпуск", u"Карьера", u"Плюшки и бонусы"],
+        "repeat_last_command_text": "false",
+        "repeat_last_command_next_commands": "false",
+        "repeatable_text": "true",
+        "repeatable_next_commands": "true",
+        "answer_func": "answerEMPTY",
+        "answer_text": [u"Да, в работе много тонконстей, о чем хотел бы узнать?"],
+        "re": [u"банк", u"сетелем", u"кредито", u"cetelem", u"bank"],
+        "type": "info"
+    },
+    u"сообщить о сложностях в работе": {
         "command": u"Сообщить о сложностях в работе",
         "previous_commands": ["начать заново"],
         "next_commands": ["Отмена"],
