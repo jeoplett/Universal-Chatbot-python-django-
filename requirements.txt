@@ -1,5 +1,5 @@
 cheroot==5.1.0
-Django==1.10.5
+Django==1.11.19
 gunicorn==19.6.0
 portend==1.8
 pyTelegramBotAPI==2.3.0
