@@ -47,6 +47,26 @@ BOT_CONFIGS = {
         "accept_sound_messages" : 'no',
         "accept_video_messages" : 'no',
         "state" : "running"
+    },
+    "49e8d10c7d27d26a-3e72f70e63166065-4d73250fa4de5153": {
+        "name" : u"hrcetelemrkz",
+        "type" : "viber",
+        "start" : "yes",
+        "api_token" : "49e8d10c7d27d26a-3e72f70e63166065-4d73250fa4de5153",
+        "web_hook_url" : "https://pure-coast-15562-heroku-18.herokuapp.com:443/universal_bot_dispatcher/49e8d10c7d27d26a-3e72f70e63166065-4d73250fa4de5153/",
+        "web_hook_ssl_sert" : "",
+        "web_hook_ssl_priv" : "",
+        "knowledge_profile" : "adopt",
+        "module": "bot_viber",
+        "module_config" : {
+            "text_message_length" : '300'
+        },
+        "accept_text_messages" : 'yes',
+        "accept_event_messages" : 'yes',
+        "accept_picture_messages" : 'no',
+        "accept_sound_messages" : 'no',
+        "accept_video_messages" : 'no',
+        "state" : "running"
     }
 }
 
