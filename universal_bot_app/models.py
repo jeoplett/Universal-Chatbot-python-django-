@@ -114,7 +114,7 @@ MESSAGE_MAP_ADOPT_RKZ = {
     u"важные контакты": {
         "command": u"Важные контакты",
         "previous_commands": ["задать вопрос"],
-        "next_commands": [u"Важные контакты", u"О банке", u"Наши ценности", u"Рабочие моменты"],
+        "next_commands": [u"HR", u"Вопросы обучения", u"Отдел кадров", u"Другой контакт"],
         "repeat_last_command_text": "false",
         "repeat_last_command_next_commands": "false",
         "repeatable_text": "true",
