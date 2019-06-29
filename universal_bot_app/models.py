@@ -70,6 +70,159 @@ BOT_CONFIGS = {
     }
 }
 
+# Профиль знаний бота для адаптации новичков РКЦ
+MESSAGE_MAP_ADOPT_RKZ = {
+    "/start": {
+        "command": "/start",
+        "previous_commands": ["*"],
+        "next_commands": [u"Задать вопрос", u"Сообщить о сложностях в работе"],
+        "repeat_last_command_text": "false",
+        "repeat_last_command_next_commands": "false",
+        "repeatable_text": "false",
+        "repeatable_next_commands": "true",
+        "answer_func": "answerEMPTY",
+        "answer_text": [u"Привет! Для начала давай познакомимся. Я - бот! Нестандартное решение для твоей адаптации)) С моей помощью ты можешь легко узнать любую информацию. Если я иногда не буду понимать тебя, то буду переспрашивать."],
+        "re": ["hi", u"привет", u"здравствуйте", u"добрый день", u"добрый вечер", u"доброе утро", u"начать"],
+        "type": "info"
+    },
+    u"начать заново": {
+        "command": u"Начать заново",
+        "previous_commands": ["*"],
+        "next_commands": [u"Задать вопрос", u"Сообщить о сложностях в работе"],
+        "repeat_last_command_text": "false",
+        "repeat_last_command_next_commands": "false",
+        "repeatable_text": "true",
+        "repeatable_next_commands": "true",
+        "answer_func": "answerEMPTY",
+        "answer_text": [u"О чем хочешь узнать?" + u"\U0001F609"],
+        "re": [u"начать заново"],
+        "type": "info"
+    },
+    u"задать вопрос": {
+        "command": u"Задать вопрос",
+        "previous_commands": ["/start"],
+        "next_commands": [u"Важные контакты", u"О банке", u"Наши ценности", u"Рабочие моменты"],
+        "repeat_last_command_text": "false",
+        "repeat_last_command_next_commands": "false",
+        "repeatable_text": "true",
+        "repeatable_next_commands": "true",
+        "answer_func": "answerEMPTY",
+        "answer_text": [u"Что именно тебя интересует (выбор ниже)?"],
+        "re": [u"задать вопрос", u"вопрос"],
+        "type": "info"
+    },
+   u"сообщить о сложностях в работе": {
+        "command": u"Сообщить о сложностях в работе",
+        "previous_commands": ["начать заново"],
+        "next_commands": ["Отмена"],
+        "repeat_last_command_text": "false",
+        "repeat_last_command_next_commands": "false",
+        "repeatable_text": "false",
+        "repeatable_next_commands": "false",
+        "after_push_command": u"начать заново",
+        "after_push_text": u"Спасибо, что рассказал нам о своей ситуации. Мы обязательно рассмотрим ее и в случае необходимости примем меры.",
+        "push_cancel": u"отмена",
+        "push_cancel_text": u"Операция отменена.",
+        "answer_func": "answerPUSH",
+        "answer_text": [u"Подробно опиши свою ситуацию, я передам информацию нужным коллегам (или напиши слово 'отмена'):"],
+        "re": [u"сложно", u"проблем", u"трудно"],
+        "type": "push"
+    },
+    u"помощь": {
+        "command": u"Помощь",
+        "previous_commands": ["*"],
+        "next_commands": [],
+        "repeat_last_command_text": "true",
+        "repeat_last_command_next_commands": "true",
+        "repeatable_text": "false",
+        "repeatable_next_commands": "false",
+        "answer_func": "answerEMPTY",
+        "answer_text": [u"Чтобы получить интересующую информацию воспользуйся меню внизу экрана или напиши вопрос в строке сообщения. Если на какой-то вопрос я не смогу ответить, то попробуй задать его снова через день, возможно, я уже буду знать на него ответ. Чтобы попасть в меню нажми на /start."],
+        "re": [u"помощь"],
+        "type": "info"
+    },
+    "/unknown": {
+        "command": "/unknown",
+        "previous_commands": ["*"],
+        "next_commands": [u"Помощь"],
+        "repeat_last_command_text": "true",
+        "repeat_last_command_next_commands": "true",
+        "repeatable_text": "false",
+        "repeatable_next_commands": "false",
+        "answer_func": "answerUNKNOWN",
+        "answer_text": [u"Видимо у меня есть ещё не вся информация о работе в Сетелем, но я обязательно узнаю то, что тебе нужно, и смогу ответить позже. Напиши мне завтра."],
+        "re": [],
+        "transit_to": "{GOBACK}",
+        "type": "transit"
+    },
+    "/event": {
+        "command": "/event",
+        "previous_commands": ["*"],
+        "next_commands": [],
+        "repeat_last_command_text": "false",
+        "repeat_last_command_next_commands": "false",
+        "repeatable_text": "false",
+        "repeatable_next_commands": "false",
+        "answer_func": "answerEVENT",
+        "answer_text": [""],
+        "re": ['/event'],
+        "transit_to": "",
+        "type": "info"
+    },
+    "/similar": {
+        "command": "/similar",
+        "previous_commands": ["*"],
+        "next_commands": [""],
+        "repeat_last_command_text": "false",
+        "repeat_last_command_next_commands": "false",
+        "repeatable_text": "true",
+        "repeatable_next_commands": "true",
+        "answer_text": [u"Ой, я не совсем понял, что ты спросил. Пожалуйста, выбери нужный пункт из списка внизу."],
+        "answer_func": "answerSIMILAR",
+        "re": [],
+        "type": "info"
+    },
+    "/picture": {
+        "command": "/picture",
+        "previous_commands": ["*"],
+        "next_commands": [""],
+        "repeat_last_command_text": "false",
+        "repeat_last_command_next_commands": "false",
+        "repeatable_text": "true",
+        "repeatable_next_commands": "true",
+        "answer_text": [u"Спасибо за картинку, обязательно посмотрю его позже."],
+        "answer_func": "answerPICTURE",
+        "re": [],
+        "type": "picture"
+    },
+    "/sound": {
+        "command": "/sound",
+        "previous_commands": ["*"],
+        "next_commands": [""],
+        "repeat_last_command_text": "false",
+        "repeat_last_command_next_commands": "false",
+        "repeatable_text": "true",
+        "repeatable_next_commands": "true",
+        "answer_text": [u"Спасибо за звуковой файл, обязательно послушаю его позже."],
+        "answer_func": "answerSOUND",
+        "re": [],
+        "type": "sound"
+    },
+    "/video": {
+        "command": "/video",
+        "previous_commands": ["*"],
+        "next_commands": [""],
+        "repeat_last_command_text": "false",
+        "repeat_last_command_next_commands": "false",
+        "repeatable_text": "true",
+        "repeatable_next_commands": "true",
+        "answer_text": [u"Видео? Мне? Спасибо, обязательно посмотрю его позже."],
+        "answer_func": "answerMOVIE",
+        "re": [],
+        "type": "video"
+    }
+}
+
 # Профиль знаний бота для адаптации КЭ
 MESSAGE_MAP_ADOPT = {
     "/start": {
@@ -987,6 +1140,18 @@ MESSAGE_MAP_ADOPT = {
 BOT_KNOWLEDGE_PROFILES = {
     "adopt" : {
         "syntax" : MESSAGE_MAP_ADOPT,
+        "semantics" : {},
+        "command_unknown" : u"/unknown",
+        "command_similarity" : u"/similar",
+        "command_picture" : u"/picture",
+        "command_sound" : u"/sound",
+        "command_video" : u"/video",
+        "command_start" : u"/start",
+        "command_event" : u"/event",
+        "command_help" : u"Помощь"
+    },
+    "adoptrkz" : {
+        "syntax" : MESSAGE_MAP_ADOPT_RKZ,
         "semantics" : {},
         "command_unknown" : u"/unknown",
         "command_similarity" : u"/similar",
