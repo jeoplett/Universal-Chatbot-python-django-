@@ -153,7 +153,7 @@ MESSAGE_MAP_ADOPT_RKZ = {
         "re": [u"обшая", u"информация", u"специализация", u"банк", u"сетелем", u"cetelem"],
         "type": "info"
     },
-    u"отделы РКЦ": {
+    u"отделы ркц": {
         "command": u"Отделы РКЦ",
         "previous_commands": ["О банке"],
         "next_commands": [u"О банке", u"Начать заново"],
@@ -201,7 +201,7 @@ MESSAGE_MAP_ADOPT_RKZ = {
     u"наши ценности": {
         "command": u"Наши ценности",
         "previous_commands": ["задать вопрос"],
-        "next_commands": [u"Да", u"Нет", u"Начать заново"],
+        "next_commands": [u"Да (расскажи про ценности)", u"Нет (не надо про ценности)", u"О банке", u"Начать заново"],
         "repeat_last_command_text": "false",
         "repeat_last_command_next_commands": "false",
         "repeatable_text": "true",
@@ -209,6 +209,45 @@ MESSAGE_MAP_ADOPT_RKZ = {
         "answer_func": "answerEMPTY",
         "answer_text": [u"Хотел бы узнать о ценностях, принятых у нас в Банке?"],
         "re": [u"ценност", u"лидер", u"команда", u"клиент"],
+        "type": "info"
+    },
+    u"нет (не надо про ценности)": {
+        "command": u"Нет (не надо про ценности)",
+        "previous_commands": ["о банке"],
+        "next_commands": [u"О банке", u"Начать заново"],
+        "repeat_last_command_text": "false",
+        "repeat_last_command_next_commands": "false",
+        "repeatable_text": "true",
+        "repeatable_next_commands": "true",
+        "answer_func": "answerEMPTY",
+        "answer_text": [u"Хорошо, сейчас не будем про ценности, но когда у тебя будет время, ознакомься с ними внимательнее. Это поможет тебе понять, что от тебя ожидают на работе."],
+        "re": [u"UYFE!!#&TEH"],
+        "type": "info"
+    },
+    u"да (расскажи про ценности)": {
+        "command": u"Да (расскажи про ценности)",
+        "previous_commands": ["о банке"],
+        "next_commands": [u"О банке", u"Начать заново"],
+        "repeat_last_command_text": "false",
+        "repeat_last_command_next_commands": "false",
+        "repeatable_text": "true",
+        "repeatable_next_commands": "true",
+        "answer_func": "answerEMPTY",
+        "answer_text": [u"""
+Я - ЛИДЕР
+    Я принимаю ответственность за себя и за то, что происходит вокруг
+    Я честен с собой, коллегами и Клиентами
+    Я совершенствую себя, Банк и наше окружение, делая лучшее, на что способен
+МЫ - КОМАНДА
+    Мы с готовностью помогаем друг другу, работая на общий результат
+    Мы помогаем расти и развиваться нашим коллегам
+    Мы открыты, уважаем коллег и доверяем друг другу
+ВСЕ - ДЛЯ КЛИЕНТА
+    Я принимаю ответственность за себя и за то, что происходит вокруг
+    Я честен с собой, коллегами и Клиентами
+    Я совершенствую себя, Банк и наше окружение, делая лучшее, на что способен
+        """],
+        "re": [u"UYFE!!#&TEH"],
         "type": "info"
     },
     u"рабочие моменты": {
