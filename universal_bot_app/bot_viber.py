@@ -65,7 +65,7 @@ def runBot(bot_config):
         if bot_config['type'] == __MESSENGER_TYPE__ and bot_config['start'] == "yes":
             bot = getCurBotAPIRuntime(bot_config)
             # Сброс прежнего веб-хука
-            bot.set_webhook("")
+            # bot.set_webhook("")
             # Установка веб-хука на обработчик бота
             bot.set_webhook(bot_config['web_hook_url'])
     except Exception as exc:
